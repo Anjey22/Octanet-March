@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background: cornsilk;
+    background: linear-gradient(135deg, #153677, #4e085f);
+}
+
+/* main container */
+.mainContainer {
+    position: relative;
+    max-width: 800px;
+    padding: 10px;
+    margin: 120px auto;
+    background: white;
+    align-items: center;
+    justify-content: center;
+}
+
+/* header */
+.title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#logo {
+    height: 50px;
+    margin: 10px 10px 10px 0px;
+}
+
+/* input tab */
+.addTask > input[type="text"] {
+    width: 75%;
+    color: rgb(23, 23, 23);
+    border: none;
+    border-bottom: 2px solid #e1c554;
+    background: none;
+    padding: 10px 30px;
+    font-size: 22px;
+    outline: none;
+    margin-left: 60px;
+}
+
+.addTask button {
+    margin: 0px 10px;
+    background: #f46b45;
+    color: black;
+    font-size: 18px;
+    text-transform: uppercase;
+    padding: 10px;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+/* categories */
+.notComplete, .completed {
+    margin: 5px 0px;
+    padding: 20px 20px;
+    width: calc(100% - 60px); /* Adjust width for smaller screens */
+    position: relative;
+    left: 30px;
+}
+
+h3 {
+    font-size: 28px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #0db643;
+}
+
+ol {
+    list-style: none;
+    counter-reset: my-counter;
+}
+
+ol li {
+    width: 100%;
+    padding: 18px;
+    margin: 5px 10px;
+    background-color: rgb(241, 40, 107);
+    font-size: 22px;
+    counter-increment: my-counter;
+    color: white;
+    font-weight: bolder;
+}
+
+ol.completed li {
+    background: rgb(108, 178, 222);
+}
+
+ol li::before {
+    content: counter(my-counter);
+    background: #643cc1;
+    border-radius: 50%;
+    height: 2rem;
+    width: 2rem;
+    display: inline-block;
+    line-height: 2rem;
+    text-align: center;
+    color: white;
+    margin-right: 10px;
+}
+
+/* check, edit, delete buttons */
+li button {
+    float: right;
+    padding: 5px;
+    font-size: 28px;
+    line-height: 28px;
+    margin-right: 12px;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: white;
+}
+
+/* Media Queries for Responsiveness */
+@media only screen and (max-width: 600px) {
+    .mainContainer {
+        margin: 80px auto; /* Adjust margin for smaller screens */
+    }
+    
+    .addTask > input[type="text"] {
+        width: 60%; /* Adjust width for smaller screens */
+    }
+    
+    .notComplete, .completed {
+        width: calc(100% - 40px); /* Adjust width for smaller screens */
+        left: 20px;
+    }
+}

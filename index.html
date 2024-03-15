@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDoList</title>
+    <link rel="stylesheet" href="todo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+        <!---main container-->
+    <div class="mainContainer">
+        <div class="title" ><img id="logo" src="logo.png" alt=""><h2>To-Do List</h2></div>
+        <div class="addTask">
+            <input type="text" placeholder="Add Task">
+            <button>Add</button>
+        </div>
+
+        <ol class="notComplete">
+            <h3 style="color: red;">Pending Task</h3>
+        
+                
+        <!---Task-->
+        <!---
+            <li>
+                task1
+                <button><i class="fa-solid fa-trash"></i></button>
+                <button><i class="fa-solid fa-pen-to-square"></i></button>
+                <button><i class="fa-solid fa-circle-check"></i></button>
+            </li---->   
+        </ol>
+        <ol class="completed">
+            <h3>Completed Task</h3>
+
+            <!--<li>
+                task1
+                <button><i class="fa-solid fa-trash"></i></button>
+            </li>--->
+        
+        </ol>
+    </div>
+        <!---Script-->
+    <script src="todo.js"></script>
+</body>
+</html>
